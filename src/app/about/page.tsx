@@ -21,7 +21,7 @@ export default function About() {
             Bali Tarantula was founded in 2010 with a passion for sharing the beauty and culture of Bali with travelers from around the world. Our team of experienced local guides and travel experts work tirelessly to create unforgettable experiences for our clients.
           </p>
           <p className="text-gray-600">
-            We specialize in crafting tailor-made tour packages that cater to various interests, from adventure seekers to culture enthusiasts. Our commitment to excellence and sustainable tourism has made us a trusted name in Bali's travel industry.
+            We specialize in crafting tailor-made tour packages that cater to various interests, from adventure seekers to culture enthusiasts. Our commitment to excellence and sustainable tourism has made us a trusted name in Bali&apos;s travel industry.
           </p>
         </div>
       </div>
@@ -61,3 +61,4 @@ export default function About() {
     </div>
   )
 }
+

@@ -57,7 +57,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[1, 2].map((i) => (
               <div key={i} className="bg-white rounded-lg shadow-md p-6">
-                <p className="text-gray-600 mb-4">"Amazing experience with Bali Tarantula! The tour was well-organized and our guide was knowledgeable and friendly."</p>
+                <p className="text-gray-600 mb-4">&quot;Amazing experience with Bali Tarantula! The tour was well-organized and our guide was knowledgeable and friendly.&quot;</p>
                 <p className="font-bold">- Happy Traveler {i}</p>
               </div>
             ))}

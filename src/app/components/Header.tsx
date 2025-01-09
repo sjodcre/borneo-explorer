@@ -1,14 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Palmtree } from 'lucide-react'
 
