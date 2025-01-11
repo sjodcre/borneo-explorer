@@ -7,8 +7,8 @@ import Footer from './components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bali Tarantula Clone',
-  description: 'A clone of the Bali Tarantula website',
+  title: 'Celebes Explorer - Sipadan Liveaboard Diving',
+  description: 'Experience world-class diving in Sipadan aboard MV Celebes Explorer. Exclusive liveaboard packages with guaranteed Sipadan permits.',
 }
 
 export default function RootLayout({
