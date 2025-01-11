@@ -41,7 +41,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">Bali Adventure Package {i}</h3>
                   <p className="text-gray-600 mb-4">Experience the thrill of Bali with our adventure package.</p>
                   <Link href="/packages" className="text-blue-600 font-bold hover:underline">
-                    Learn More
+                    Book Now
                   </Link>
                 </div>
               </div>
