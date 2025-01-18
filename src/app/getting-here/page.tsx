@@ -1,10 +1,20 @@
 'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { Plane, Car, Ship, Hotel, Info } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
-import Map from '../components/Maps'
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Plane, Car, Ship, Hotel, Info } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+
+// Dynamically import the Map component
+const Map = dynamic(() => import('../components/Maps'), {
+  loading: () => (
+    <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center">
+      <div className="text-gray-500">Loading map...</div>
+    </div>
+  ),
+  ssr: false
+});
 
 export default function GettingHere() {
   return (
