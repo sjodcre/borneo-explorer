@@ -32,7 +32,7 @@ export default function DivingPackagesContent() {
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4">4D3N Sipadan Cruise</h2>
-                <p className="text-xl text-blue-600 font-bold mb-4">SGD 1,088 per person</p>
+                <p className="text-secondary font-bold mb-4">SGD 1,088 per person</p>
                 <p className="text-gray-600 mb-6">
                   Perfect for a long weekend getaway, featuring 9 dives across Sipadan's most spectacular sites.
                 </p>

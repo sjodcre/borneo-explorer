@@ -1,14 +1,34 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Existing columns remain the same */}
           <div>
             <h3 className="text-xl font-bold mb-4">Celebes Explorer</h3>
             <p className="text-blue-100">Malaysia's premier Sipadan liveaboard vessel, offering exclusive diving experiences at the world's top dive sites.</p>
+            {/* Add social media icons */}
+            <div className="flex space-x-4 mt-4">
+              <a
+                href="https://facebook.com/celebesexplorer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-300 transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href="https://instagram.com/celebesexplorer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-300 transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+            </div>
           </div>
 
           <div>
@@ -25,6 +45,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/the-vessel" className="text-blue-100 hover:text-white">About Our Vessel</Link></li>
               <li><Link href="/dive-sites" className="text-blue-100 hover:text-white">Dive Sites</Link></li>
+              <li><Link href="/getting-here" className="text-blue-100 hover:text-white">How to Get Here</Link></li>
               <li><Link href="/book-now" className="text-blue-100 hover:text-white">Book Now</Link></li>
             </ul>
           </div>
