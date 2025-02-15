@@ -108,24 +108,26 @@ const PhotoGallery = () => {
       </p>
       
       <Tabs defaultValue="diving" className="w-full">
-        <TabsList className="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center mb-6 sm:mb-8 gap-1 sm:gap-2 p-1 rounded-lg">
-          {galleryCategories.map((category) => (
-            <TabsTrigger 
-              key={category.id} 
-              value={category.id} 
-              className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-2 sm:px-6 sm:py-2 text-center min-h-[64px] sm:min-h-0"
-            >
-              {category.icon}
-              <span className="text-[11px] sm:text-sm font-medium leading-tight">{category.title}</span>
-            </TabsTrigger>
-          ))}
+        <TabsList className="flex sm:flex-wrap sm:justify-center mb-6 sm:mb-8 sm:gap-2 bg-muted/50 rounded-lg p-1">
+          <div className="flex w-full sm:w-auto overflow-x-auto scrollbar-hide sm:overflow-visible gap-1">
+            {galleryCategories.map((category) => (
+              <TabsTrigger 
+                key={category.id} 
+                value={category.id} 
+                className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-3 py-2 sm:px-6 sm:py-2 text-center whitespace-nowrap"
+              >
+                {category.icon}
+                <span className="text-xs sm:text-sm font-medium">{category.title}</span>
+              </TabsTrigger>
+            ))}
+          </div>
         </TabsList>
 
         {galleryCategories.map((category) => (
-          <TabsContent key={category.id} value={category.id}>
-            <div className="text-center mb-6 sm:mb-8">
+          <TabsContent key={category.id} value={category.id} className="mt-2 sm:mt-6">
+            <div className="text-center mb-4 sm:mb-8">
               <h2 className="text-xl sm:text-2xl font-bold mb-2">{category.title}</h2>
-              <p className="text-base sm:text-lg text-gray-600 px-2">{category.description}</p>
+              <p className="text-sm sm:text-base text-gray-600 px-2">{category.description}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {category.images.map((image, index) => (
