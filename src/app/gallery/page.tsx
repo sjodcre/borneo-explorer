@@ -38,7 +38,7 @@ const PhotoGallery = () => {
           caption: 'Modern and comfortable lounge area'
         },
         {
-          src: '/images/gallery/vessel/NIC_5707.jpg',
+          src: '/images/gallery/vessel263668185_328301125689198_5226678590749593793_n.jpg',
           alt: 'Cabin interior',
           caption: 'Well-appointed cabins for restful nights'
         }
@@ -101,36 +101,37 @@ const PhotoGallery = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4 text-center">Photo Gallery</h1>
-      <p className="text-xl text-gray-600 mb-8 text-center">
+    <div className="container mx-auto px-2 sm:px-4 py-8 sm:py-16">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-center">Photo Gallery</h1>
+      <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 text-center px-2">
         Dive into our world of underwater adventures and liveaboard comfort
       </p>
       
       <Tabs defaultValue="diving" className="w-full">
-        <TabsList className="flex justify-center mb-8 flex-wrap gap-2">
+        <TabsList className="flex flex-wrap justify-start sm:justify-center mb-6 sm:mb-8 gap-1 sm:gap-2 overflow-x-auto">
           {galleryCategories.map((category) => (
             <TabsTrigger 
               key={category.id} 
               value={category.id} 
-              className="px-6 py-2 flex items-center gap-2"
+              className="px-3 sm:px-6 py-1.5 sm:py-2 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base whitespace-nowrap"
             >
               {category.icon}
-              {category.title}
+              <span className="hidden sm:inline">{category.title}</span>
+              <span className="sm:hidden">{category.title.split(' ')[0]}</span>
             </TabsTrigger>
           ))}
         </TabsList>
 
         {galleryCategories.map((category) => (
           <TabsContent key={category.id} value={category.id}>
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2">{category.title}</h2>
-              <p className="text-lg text-gray-600">{category.description}</p>
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold mb-2">{category.title}</h2>
+              <p className="text-base sm:text-lg text-gray-600 px-2">{category.description}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {category.images.map((image, index) => (
                 <Card key={index} className="overflow-hidden group">
-                  <div className="relative h-72">
+                  <div className="relative h-60 sm:h-72">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -138,8 +139,8 @@ const PhotoGallery = () => {
                       className="object-cover transition-transform group-hover:scale-105 duration-300"
                     />
                   </div>
-                  <CardContent className="p-4">
-                    <p className="text-center text-gray-600">{image.caption}</p>
+                  <CardContent className="p-3 sm:p-4">
+                    <p className="text-center text-sm sm:text-base text-gray-600">{image.caption}</p>
                   </CardContent>
                 </Card>
               ))}
