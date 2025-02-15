@@ -38,7 +38,7 @@ const PhotoGallery = () => {
           caption: 'Modern and comfortable lounge area'
         },
         {
-          src: '/images/gallery/vessel263668185_328301125689198_5226678590749593793_n.jpg',
+          src: '/images/gallery/vessel/263668185_328301125689198_5226678590749593793_n.jpg',
           alt: 'Cabin interior',
           caption: 'Well-appointed cabins for restful nights'
         }
