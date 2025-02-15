@@ -108,16 +108,15 @@ const PhotoGallery = () => {
       </p>
       
       <Tabs defaultValue="diving" className="w-full">
-        <TabsList className="flex flex-wrap justify-start sm:justify-center mb-6 sm:mb-8 gap-1 sm:gap-2 overflow-x-auto">
+        <TabsList className="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center mb-6 sm:mb-8 gap-1 sm:gap-2 p-1 rounded-lg">
           {galleryCategories.map((category) => (
             <TabsTrigger 
               key={category.id} 
               value={category.id} 
-              className="px-3 sm:px-6 py-1.5 sm:py-2 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base whitespace-nowrap"
+              className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-2 sm:px-6 sm:py-2 text-center min-h-[64px] sm:min-h-0"
             >
               {category.icon}
-              <span className="hidden sm:inline">{category.title}</span>
-              <span className="sm:hidden">{category.title.split(' ')[0]}</span>
+              <span className="text-[11px] sm:text-sm font-medium leading-tight">{category.title}</span>
             </TabsTrigger>
           ))}
         </TabsList>
