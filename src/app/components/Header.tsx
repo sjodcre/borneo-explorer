@@ -18,6 +18,7 @@ const Header = () => {
     { name: 'Diving Packages', path: '/diving-packages' },
     { name: 'The Vessel', path: '/the-vessel' },
     { name: 'Dive Sites', path: '/dive-sites' },
+    { name: 'Availability', path: '/availability' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Getting Here', path: '/getting-here' },
     { name: 'Book Now', path: '/book-now' }
